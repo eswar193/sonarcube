@@ -31,7 +31,5 @@ WORKDIR ${SONARQUBE_SCANNER_HOME}
 
 ENTRYPOINT ["/launch.sh"]
 
-COPY . /Dockerfile
-WORKDIR /Dockerfile/cloud-python
-
-RUN cat/ Dockerfile/cloud-python
+COPY . /cloud-python
+RUN make /cloud-python
