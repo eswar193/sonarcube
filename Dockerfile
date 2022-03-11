@@ -32,7 +32,7 @@ WORKDIR ${SONARQUBE_SCANNER_HOME}
 ENTRYPOINT ["/launch.sh"]
 
 
-
+WORKDIR /cloud-python/ .
 FROM python:3.6-slim-buster
 
 RUN python -m pip install --upgrade pip
