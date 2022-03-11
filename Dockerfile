@@ -31,5 +31,7 @@ WORKDIR ${SONARQUBE_SCANNER_HOME}
 
 ENTRYPOINT ["/launch.sh"]
 
-COPY . /cloud-python
-RUN make /cloud-python
+COPY cloud-python /
+WORKDIR /cloud-python/ .
+
+RUN /cloud-python/cloudbuild.yaml
